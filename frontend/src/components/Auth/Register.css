@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.register-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 35px;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 430px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* top glow line */
+.register-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  /* background: linear-gradient(90deg, #2563eb, #38bdf8, #2563eb); */
+}
+
+.register-title {
+  text-align: center;
+  /* margin-bottom: 28px; */
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14.5px;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+.register-form input::placeholder {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.register-form input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  transform: translateY(-1px);
+}
+
+.register-form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+}
+
+.register-form button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+.register-form button:active {
+  transform: scale(0.98);
+}
+
+.register-link {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #334155;
+}
+
+.register-link a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.2s ease;
+}
+
+.register-link a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 30px 22px;
+  }
+
+  .register-title {
+    font-size: 24px;
+  }
+}
