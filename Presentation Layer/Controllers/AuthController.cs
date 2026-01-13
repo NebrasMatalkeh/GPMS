@@ -1,18 +1,26 @@
 ﻿using Business_Logic_Layer.DTOS;
 using Business_Logic_Layer.Interface;
+using Data_Access_Layer;
+using Data_Access_Layer.Models;
+using Humanizer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
+    
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService )
     {
         _authService = authService;
+       
     }
+
+
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] AuthDTO.RegisterDTO dto)

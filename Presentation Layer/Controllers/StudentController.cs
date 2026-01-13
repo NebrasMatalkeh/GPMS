@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize(Roles = "Student,Admin,Supervisor")]
+[Authorize()]
 public class StudentController : ControllerBase
 {
     private readonly IStudentService _studentService;
