@@ -20,10 +20,10 @@ namespace Business_Logic_Layer.DTOS
             public string Email { get; set; }
             public string Password { get; set; }
             public string Role { get; set; }
-            public float? GPA { get; set; }
-            public string Skills { get; set; }
-            public string Interests { get; set; }
-            public string ResearchInterests { get; set; }
+            //public float? GPA { get; set; }
+            //public string Skills { get; set; }
+            //public string Interests { get; set; }
+            //public string ResearchInterests { get; set; }
             public string Department { get; set; }
         }
 

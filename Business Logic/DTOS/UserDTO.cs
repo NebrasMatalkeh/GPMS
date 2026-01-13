@@ -18,7 +18,7 @@ namespace Business_Logic_Layer.DTOS
 
     public class StudentDTO
     {
-        public string Id { get; set; }
+        public string ?Id { get; set; }
         public string UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -29,7 +29,7 @@ namespace Business_Logic_Layer.DTOS
         public string Interests { get; set; }
         public string Description { get; set; }
         public string TeamRole { get; set; }
-        public string TeamId { get; set; }
+        public string ?TeamId { get; set; }
         public string TeamName { get; set; }
         public bool ? HasTram { get; set; }
         public string SortBy{ get; set; }
