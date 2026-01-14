@@ -24,7 +24,7 @@ namespace Data_Access_Layer.Models
         // Relations (FKs)
         // =========================
         public string LeaderId { get; set; }
-        public string? SupervisorId { get; set; }
+        public string SupervisorId { get; set; }
 
         // =========================
         // Audit
