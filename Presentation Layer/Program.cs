@@ -1,4 +1,6 @@
 ﻿
+using Business_Logic.Interface;
+using Business_Logic.service;
 using Business_Logic_Layer.Interface;
 using Business_Logic_Layer.Services;
 using Data_Access_Layer;
@@ -36,6 +38,8 @@ namespace Presentation_Layer
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IStudentService, StudentService>();
             builder.Services.AddScoped<ITeamService, TeamService>();
+
+            builder.Services.AddScoped<ISupervisorService, SupervisorService>();
 
 
             builder.Services.AddControllers();
