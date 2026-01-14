@@ -1,4 +1,7 @@
-﻿using Business_Logic_Layer.Interface;
+﻿using Business_Logic.Interface;
+
+using Business_Logic_Layer.Interface;
+using Business_Logic_Layer.Services;
 using Data_Access_Layer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +36,8 @@ namespace Presentation_Layer
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IStudentService, StudentService>();
+            builder.Services.AddScoped<ITeamService, TeamService>();
+
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
