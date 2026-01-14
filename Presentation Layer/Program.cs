@@ -1,5 +1,4 @@
-﻿using Business_Logic.Interface;
-
+﻿
 using Business_Logic_Layer.Interface;
 using Business_Logic_Layer.Services;
 using Data_Access_Layer;
@@ -77,8 +76,8 @@ namespace Presentation_Layer
             app.UseCors("AllowAll");
             // =================================================
 
-            // ===================== مهم جداً =====================
-            app.UseAuthentication();   // ❗ هذا كان ناقص
+            // =====================  =====================
+            app.UseAuthentication();
             app.UseAuthorization();
             // ====================================================
 

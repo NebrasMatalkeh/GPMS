@@ -9,6 +9,7 @@ namespace Presentation_Layer.Controllers
     [Route("api/[controller]")]
     [Authorize(Roles = "Student,Admin")]
     public class TeamController : ControllerBase
+
     {
         private readonly ITeamService _teamService;
 
