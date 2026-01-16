@@ -84,6 +84,30 @@ namespace Data_Access_Layer
                 .HasForeignKey(t => t.TeamId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Team → Members
+            modelBuilder.Entity<Team>()
+                .HasMany(t => t.Members)
+                .WithOne(s => s.Team)
+                .HasForeignKey(s => s.TeamId);
+
+            // Team → Tasks
+            modelBuilder.Entity<Team>()
+                .HasMany(t => t.Tasks)
+                .WithOne(pt => pt.Team)
+                .HasForeignKey(pt => pt.TeamId);
+
+            // Team → Meetings
+            modelBuilder.Entity<Team>()
+                .HasMany(t => t.Meetings)
+                .WithOne(m => m.Team)
+                .HasForeignKey(m => m.TeamId);
+
+            // Team → DefenseSchedule (One-to-One)
+            modelBuilder.Entity<Team>()
+                .HasOne(t => t.DefenseSchedule)
+                .WithOne(d => d.Team)
+                .HasForeignKey<DefenseSchedule>(d => d.TeamId);
+
             // ProjectTask ↔ Student
             modelBuilder.Entity<ProjectTask>()
                 .HasOne(t => t.Student)

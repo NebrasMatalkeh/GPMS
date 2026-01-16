@@ -372,7 +372,7 @@ namespace Data_Access.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SupervisorId")
-                        .IsRequired()
+                    .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TeamName")
@@ -616,9 +616,8 @@ namespace Data_Access.Migrations
 
             modelBuilder.Entity("Data_Access_Layer.Models.Team", b =>
                 {
-                    b.Navigation("DefenseSchedule")
-                        .IsRequired();
-
+                    b.Navigation("DefenseSchedule");
+                    
                     b.Navigation("Meetings");
 
                     b.Navigation("Members");
