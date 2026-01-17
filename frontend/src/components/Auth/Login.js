@@ -1,5 +1,6 @@
 import "./Register.css";
 import { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
@@ -10,11 +11,25 @@ export default function Login() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toast.success("Logged in Successfully");
+        
+        try {
+            const {data} = await axios.post("https://localhost:7245/api/Auth/login", {
+                email: email,
+                password: password
+            });
+            localStorage.setItem("token", data.token);
+            toast.success("Login Successful");
 
-        // reset
-        setEmail("");
-        setPassword("");
+            // reset
+            setEmail("");
+            setPassword("");
+
+            // window.location.href = "/";
+
+        } catch (error) {
+            toast.error("Login Failed");
+            console.error(error);
+        }
     }
 
     return (
