@@ -50,8 +50,11 @@ https://github.com/NebrasMatalkeh/GPMS
 
 ## Authors
 Abdullah Mohammad Khalil(159915)
+
 Ahmad Nader Mashal(158270)
+
 Shahed Mahmoud Alalawneh(157080)
+
 Nebras Morad Matalqa(157875)
 
 Jordan University of Science and Technology (JUST)
